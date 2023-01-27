@@ -1,0 +1,22 @@
+.sun-rise,
+.sun-set {
+    @include flex-mixin(center, space-evenly, column);
+    height: 100%;
+}
+
+.sun-rise p:nth-child(1),
+.sun-set p:nth-child(1) {
+    font-weight: 700;
+}
+
+.sun-time {
+    @include flex-mixin(flex-end, space-evenly);
+    width: 400px;
+    height: 100px;
+    box-shadow: 2px 3px 5px lightgrey;
+    border-radius: 20px;
+
+    @media (max-width: $breakpoint-sm) {
+        width: 300px;
+    }
+}

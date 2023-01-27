@@ -1,0 +1,27 @@
+.main-section {
+    @include flex-mixin(center, center, column);
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.main-section__today {
+    @include flex-mixin(null, center, row);
+    margin-top: 20px;
+    flex-wrap: wrap;
+    width: $content-width;
+    gap: 30px;
+
+    @media (max-width: $breakpoint-max) {
+        width: 100%;
+    }
+}
+
+.main-section__current-cards {
+    @include flex-mixin(center, space-evenly, column);
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-l) {
+        flex-direction: row;
+        gap: 20px;
+    }
+}

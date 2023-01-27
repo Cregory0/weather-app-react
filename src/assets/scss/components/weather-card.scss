@@ -1,0 +1,88 @@
+.card-wrapper {
+    @include flex-mixin(center, null, column);
+    gap: 20px;
+}
+
+.weather-card {
+    display: flex;
+    width: 400px;
+    height: 200px;
+    border-radius: 30px;
+    background: #4359f5;
+    color: white;
+    background-image: url(../../../assets/images/layered-waves.svg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+
+    @media (max-width: $breakpoint-sm) {
+        width: 300px;
+        background-size: 225% !important;
+        background-position: 35% 100% !important;
+        background-size: 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+    }
+}
+
+.weather-card__logo__forecast {
+    @include flex-mixin(flex-start, center, column);
+    width: 50%;
+    height: 100%;
+    border-radius: 30px 0px 0px 30px;
+    padding-left: 40px;
+    gap: 20px;
+
+    p {
+        font-size: $xl-font;
+    }
+}
+
+.weather-card__temp {
+    @include flex-mixin(center, center, column);
+    width: 50%;
+    height: 100%;
+    border-radius: 0px 30px 30px 0px;
+
+    h2 {
+        font-size: $xxl-font;
+    }
+
+    p {
+        font-size: $l-font;
+    }
+}
+
+.daily-stats-card {
+    @include flex-mixin(center, space-evenly);
+    width: 400px;
+    height: 100px;
+    border-radius: 30px;
+    box-shadow: 2px 3px 5px lightgrey;
+
+    @media (max-width: $breakpoint-sm) {
+        width: 300px !important;
+    }
+
+    > div {
+        @include flex-mixin(null, null, column);
+        gap: 10px;
+        font-size: $l-font;
+
+        @media (max-width: $breakpoint-sm) {
+            font-size: $md-font;
+        }
+    }
+
+    * {
+        :first-child {
+            color: rgb(122, 122, 122);
+        }
+
+        :last-child {
+            font-weight: 700;
+        }
+    }
+}

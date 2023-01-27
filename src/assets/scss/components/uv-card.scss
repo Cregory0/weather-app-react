@@ -1,0 +1,40 @@
+.uv-card {
+    @include flex-mixin(center);
+    width: 400px;
+    height: 110px;
+    border-radius: 20px;
+    background: #1c2023;
+    color: white;
+
+    @media (max-width: $breakpoint-sm) {
+        width: 300px;
+    }
+}
+
+.uv-card__logo {
+    @include flex-mixin(null, center);
+    width: 25%;
+}
+
+.uv-card__info {
+    @include flex-mixin(null, null, column);
+}
+
+.uv-card__info__data {
+    @include flex-mixin(center, space-evenly);
+    margin-bottom: 0.85rem;
+}
+
+.uv-card__info__data p:nth-child(2) {
+    padding: 5px 10px 5px 10px;
+    background: #bed64c;
+    border-radius: 20px;
+    font-size: $xs-font;
+    color: black;
+    margin-left: 1rem;
+}
+
+.uv-card__info__description {
+    display: flex;
+    font-size: $sm-font;
+}

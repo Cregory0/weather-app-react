@@ -1,0 +1,50 @@
+.prediction-card {
+    @include flex-mixin(null, null, column);
+    width: 250px;
+    height: 150px;
+    box-shadow: 2px 3px 5px lightgrey;
+    border-radius: 20px;
+}
+
+.prediction-card__top {
+    @include flex-mixin(center, space-around);
+    height: 50%;
+}
+
+.prediction-card__top p:nth-child(1) {
+    font-weight: bold;
+    font-size: $l-font;
+    margin-bottom: 2px;
+}
+
+.prediction-card__top p:nth-child(2) {
+    color: grey;
+    font-weight: 400;
+}
+
+.prediction-card__bottom {
+    @include flex-mixin(center, space-around);
+    height: 50%;
+}
+
+.daily-minmax p {
+    font-size: $xl-font;
+}
+
+.wind-precipitation {
+    @include flex-mixin(null, null, column);
+}
+
+.wind-daily,
+.precipitation-daily {
+    display: flex;
+}
+
+.wind-daily p,
+.precipitation-daily p {
+    padding-left: 10px;
+}
+
+.precipitation-daily {
+    margin-top: 5px;
+}

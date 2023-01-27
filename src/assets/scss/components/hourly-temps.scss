@@ -1,0 +1,12 @@
+.hourly-temp-container {
+    @include flex-mixin(center, center);
+    height: 100%;
+    width: $content-width;
+    gap: 20px;
+    position: relative;
+    flex-wrap: wrap;
+
+    @media (max-width: $breakpoint-max) {
+        width: 100%;
+    }
+}

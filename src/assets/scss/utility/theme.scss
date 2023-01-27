@@ -1,0 +1,55 @@
+// Dark Mode
+.dark {
+    background: $dark-mode-background;
+    color: white;
+
+    .sun-time {
+        background: $dark-mode-card;
+        box-shadow: none;
+    }
+
+    .uv-card {
+        background: $dark-mode-card;
+        box-shadow: none;
+
+        .uv-card__info__data p:nth-child(2) {
+            background: $dark-mode-purple;
+            color: white;
+        }
+    }
+
+    .daily-stats-card {
+        background: $dark-mode-card;
+        box-shadow: none;
+    }
+
+    .hourly-item {
+        background: $dark-mode-card;
+        box-shadow: none;
+    }
+
+    .prediction-card {
+        background: $dark-mode-card;
+        box-shadow: none;
+
+        .wind-precipitation {
+            svg {
+                fill: $dark-mode-purple;
+            }
+        }
+    }
+
+    .header__searchbar {
+        background: $dark-mode-card;
+
+        input {
+            color: white;
+        }
+    }
+}
+
+// Light Mode
+.light {
+    background: red;
+    color: white;
+}

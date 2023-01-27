@@ -1,0 +1,11 @@
+.weather-forecast-container {
+    @include flex-mixin(center, center, row);
+    height: 70%;
+    width: $content-width;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    @media (max-width: $breakpoint-max) {
+        width: 100%;
+    }
+}

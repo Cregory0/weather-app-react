@@ -1,0 +1,58 @@
+.header__logo {
+    @include flex-mixin(center, space-evenly, row);
+}
+
+.header__logo__info {
+    @include flex-mixin(center, center, column);
+    margin-left: 1rem;
+    gap: 5px;
+
+    h1 {
+        font-size: $md-font;
+    }
+
+    p {
+        font-size: $sm-font;
+    }
+}
+
+.header {
+    @include flex-mixin(center, space-between);
+    padding-top: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    @media (max-width: $breakpoint-md) {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.header__searchbar {
+    background: #edf0f0;
+    height: 2.75rem;
+    padding-left: 20px;
+    width: 300px;
+    border-radius: 10px;
+    @include flex-mixin(center);
+}
+
+.header__searchbar input {
+    font-size: $sm-font;
+    border: none;
+    background: transparent;
+    padding-left: 20px;
+}
+
+.header__searchbar input:focus {
+    outline: none;
+}
+
+.location-info {
+    @include flex-mixin(center, space-evenly);
+    width: 25%;
+
+    @media (max-width: $breakpoint-md) {
+        width: 80%;
+    }
+}

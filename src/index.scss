@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@import './assets/scss/variables.scss';
+@import './assets/scss/utility/theme.scss';
+@import './assets/scss/utility/utility.scss';
+@import './assets/scss/layout/layout.scss';
+@import './assets/scss/utility/mixins.scss';
+
+// Components
+@import './assets/scss/components/header.scss';
+@import './assets/scss/components/main-section.scss';
+@import './assets/scss/components/uv-card.scss';
+@import './assets/scss/components/weather-card.scss';
+@import './assets/scss/components/sun-set.scss';
+@import './assets/scss/components/weather-predictions.scss';
+@import './assets/scss/components/predication-cards.scss';
+@import './assets/scss/components/hourly-temps.scss';
+@import './assets/scss/components/hourly-items.scss';
+
+// Animations
+@import './assets/scss/animations/loader.scss';

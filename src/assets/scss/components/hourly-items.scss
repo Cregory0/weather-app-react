@@ -1,0 +1,36 @@
+.hourly-item {
+    @include flex-mixin(center, space-evenly, column);
+    box-shadow: 2px 3px 5px lightgrey;
+    width: 125px;
+    padding: 1rem 0;
+    gap: 20px;
+    border-radius: 20px;
+
+    @media (max-width: $breakpoint-md) {
+        width: 85px;
+        gap: 10px;
+    }
+}
+
+.hourly-item__icon {
+    @include flex-mixin(center, center);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    position: relative;
+
+    @media (max-width: $breakpoint-md) {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.hourly-item__stats {
+    @include flex-mixin(center, center, column);
+    width: 100px;
+}
+
+.hourly-item__stats p {
+    font-size: $xl-font;
+    font-weight: 500;
+}
