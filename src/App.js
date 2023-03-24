@@ -1,13 +1,18 @@
 import Main from "./components/Main";
 import Header from "./components/Header";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import useFetch from "./hooks/useFetch";
 import clsx from "clsx";
+import ReactGA from "react-ga4";
 
 function App() {
     const [searchTerm, setSearchTerm] = useState("");
     const [input, setInput] = useState("London");
     const [mode, setMode] = useState("dark");
+
+    useEffect(() => {
+        ReactGA.initialize('G-BMF70R4GBP');
+    }, []);
 
     const { loading, currentWeather, weatherData, error } = useFetch(
         input,
